@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     public static int score = 0;
     public static boolean doubleVaule = false;
@@ -25,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
     int incorrectDouble400;
 
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,11 +39,19 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText("$" + money);
     }
 
+    Button clue1 = findViewById(R.id.clue1);
+    Button clue2 = findViewById(R.id.clue2);
+    Button clue3 = findViewById(R.id.clue3);
+    Button clue4 = findViewById(R.id.clue4);
+    Button clue5 = findViewById(R.id.clue5);
+
+    //clue1.setOnClickListener(this);
+
     public void addPoints(View v) {
         v.playSoundEffect(android.view.SoundEffectConstants.CLICK);
         v.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
         switch(v.getId()) {
-            case R.id.twoHundred:
+            case R.id.clue1:
                 if(doubleVaule) {
                     score += 400;
                 }
@@ -49,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 displayScore(score);
                 break;
-            case R.id.fourHundred:
+            case R.id.clue2:
                 if(doubleVaule) {
                     score += 800;
                 }
@@ -58,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 displayScore(score);
                 break;
-            case R.id.sixHundred:
+            case R.id.clue3:
                 if(doubleVaule) {
                     score += 1200;
                 }
@@ -67,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 displayScore(score);
                 break;
-            case R.id.eightHundred:
+            case R.id.clue4:
                 if(doubleVaule) {
                     score += 1600;
                 }
@@ -76,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 displayScore(score);
                 break;
-            case R.id.oneThousand:
+            case R.id.clue5:
                 if(doubleVaule) {
                     score += 2000;
                 }
@@ -90,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /*
     public void deductPoints(View v) {
         v.playSoundEffect(android.view.SoundEffectConstants.CLICK);
         v.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
@@ -144,28 +156,30 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+     */
+
     public void doubleRound (View view) {
         view.playSoundEffect(android.view.SoundEffectConstants.CLICK);
         view.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
 
         doubleVaule = true;
 
-        Button firstButton = findViewById(R.id.twoHundred);
+        /*firstButton = findViewById(R.id.clue1);
         firstButton.setText("$400");
 
-        Button secondButton = findViewById(R.id.fourHundred);
+        secondButton = findViewById(R.id.clue2);
         secondButton.setText("$800");
 
-        Button thirdButton = findViewById(R.id.sixHundred);
+        thirdButton = findViewById(R.id.clue3);
         thirdButton.setText("$1200");
 
-        Button fourthButton = findViewById(R.id.eightHundred);
+        fourthButton = findViewById(R.id.clue4);
         fourthButton.setText("$1600");
 
-        Button fifthButton = findViewById(R.id.oneThousand);
+        fifthButton = findViewById(R.id.clue5);
         fifthButton.setText("$2000");
-
-        Button negFirstButton = findViewById(R.id.negFirst);
+*/
+        /*Button negFirstButton = findViewById(R.id.negFirst);
         negFirstButton.setText("-$400");
 
         Button negSecondButton = findViewById(R.id.negSecond);
@@ -178,7 +192,15 @@ public class MainActivity extends AppCompatActivity {
         negFourthButton.setText("-$1600");
 
         Button negFifthButton = findViewById(R.id.negFifth);
-        negFifthButton.setText("-$2000");
+        negFifthButton.setText("-$2000");*/
     }
 
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.clue1:
+                //what I want to happen (send the $ to the next activity and open it so that the amount will be added or subtracted form the total)
+        }
+
+    }
 }

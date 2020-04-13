@@ -7,25 +7,25 @@
     android:background="#060CE9">
 
     <Button
-        android:id="@+id/nextRoundButton"
+        android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
         android:background="#050cc7 "
         android:onClick="doubleRound"
-        android:text="double round"
+        android:text="back"
         android:textColor="#FFCC00"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/winnings"
+        android:id="@+id/clueAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:text="$0"
+        android:layout_marginTop="112dp"
+        android:text="$ of clue"
         android:textColor="@android:color/white"
         android:textSize="56sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,15 +42,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/winnings"
-        app:layout_constraintVertical_bias="0.19">
+        app:layout_constraintTop_toBottomOf="@+id/clueAmount"
+        app:layout_constraintVertical_bias="0.39">
 
         <Button
-            android:id="@+id/clue1"
-            android:layout_width="wrap_content"
+            android:id="@+id/correctButton"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
-            android:width="144dp"
             android:background="#050cc7 "
             android:onClick="addPoints"
             android:paddingLeft="16dp"
@@ -62,17 +61,16 @@
             android:shadowDy="16"
             android:shadowRadius="100"
             android:soundEffectsEnabled="true"
-            android:text="$200"
+            android:text="correct"
             android:textColor="#FFCC00"
             android:textSize="36sp"
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/clue2"
+            android:id="@+id/incorrectButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:width="144dp"
             android:background="#050cc7 "
             android:onClick="addPoints"
             android:paddingLeft="16dp"
@@ -84,17 +82,16 @@
             android:shadowDy="16"
             android:shadowRadius="100"
             android:soundEffectsEnabled="true"
-            android:text="$400"
+            android:text="incorrect"
             android:textColor="#FFCC00"
             android:textSize="36sp"
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/clue3"
-            android:layout_width="wrap_content"
+            android:id="@+id/passButton"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:width="144dp"
             android:background="#050cc7 "
             android:onClick="addPoints"
             android:paddingLeft="16dp"
@@ -106,51 +103,7 @@
             android:shadowDy="16"
             android:shadowRadius="100"
             android:soundEffectsEnabled="true"
-            android:text="$600"
-            android:textColor="#FFCC00"
-            android:textSize="36sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/clue4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:width="144dp"
-            android:background="#050cc7 "
-            android:onClick="addPoints"
-            android:paddingLeft="16dp"
-            android:paddingTop="16dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="16dp"
-            android:shadowColor="#00B43F3F"
-            android:shadowDx="8"
-            android:shadowDy="16"
-            android:shadowRadius="100"
-            android:soundEffectsEnabled="true"
-            android:text="$800"
-            android:textColor="#FFCC00"
-            android:textSize="36sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/clue5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:width="144dp"
-            android:background="#050cc7 "
-            android:onClick="addPoints"
-            android:paddingLeft="16dp"
-            android:paddingTop="16dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="16dp"
-            android:shadowColor="#00B43F3F"
-            android:shadowDx="8"
-            android:shadowDy="16"
-            android:shadowRadius="100"
-            android:soundEffectsEnabled="true"
-            android:text="$1000"
+            android:text="pass"
             android:textColor="#FFCC00"
             android:textSize="36sp"
             android:textStyle="bold" />
@@ -158,7 +111,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/endGameButton"
+        android:id="@+id/dailyDouble"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -167,7 +120,7 @@
         android:onClick="doubleRound"
         android:paddingLeft="8dp"
         android:paddingRight="8dp"
-        android:text="end game"
+        android:text="daily double"
         android:textColor="#FFCC00"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
