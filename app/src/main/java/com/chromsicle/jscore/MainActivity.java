@@ -1,5 +1,6 @@
 package com.chromsicle.jscore;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.HapticFeedbackConstants;
@@ -32,6 +33,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button clue1 = findViewById(R.id.clue1);
+        Button clue2 = findViewById(R.id.clue2);
+        Button clue3 = findViewById(R.id.clue3);
+        Button clue4 = findViewById(R.id.clue4);
+        Button clue5 = findViewById(R.id.clue5);
+
+        //clicks sent to the onClick method
+        clue1.setOnClickListener(this);
+        clue2.setOnClickListener(this);
+        clue3.setOnClickListener(this);
+        clue4.setOnClickListener(this);
+        clue5.setOnClickListener(this);
     }
 
     public void displayScore(int money){
@@ -39,13 +53,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         scoreView.setText("$" + money);
     }
 
-    Button clue1 = findViewById(R.id.clue1);
-    Button clue2 = findViewById(R.id.clue2);
-    Button clue3 = findViewById(R.id.clue3);
-    Button clue4 = findViewById(R.id.clue4);
-    Button clue5 = findViewById(R.id.clue5);
-
-    //clue1.setOnClickListener(this);
 
     public void addPoints(View v) {
         v.playSoundEffect(android.view.SoundEffectConstants.CLICK);
@@ -197,10 +204,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
+        //which button was clicked?
         switch (view.getId()) {
             case R.id.clue1:
                 //what I want to happen (send the $ to the next activity and open it so that the amount will be added or subtracted form the total)
+                openAnswerActivity();
+                break;
+            case R.id.clue2:
+                //what I want to happen (send the $ to the next activity and open it so that the amount will be added or subtracted form the total)
+                openAnswerActivity();
+                break;
+            case R.id.clue3:
+                //what I want to happen (send the $ to the next activity and open it so that the amount will be added or subtracted form the total)
+                openAnswerActivity();
+                break;
+            case R.id.clue4:
+                //what I want to happen (send the $ to the next activity and open it so that the amount will be added or subtracted form the total)
+                openAnswerActivity();
+                break;
+            case R.id.clue5:
+                //what I want to happen (send the $ to the next activity and open it so that the amount will be added or subtracted form the total)
+                openAnswerActivity();
+                break;
         }
 
+    }
+
+    public void openAnswerActivity() {
+        Intent intent = new Intent(this, Answer.class);
+        startActivity(intent);
     }
 }
