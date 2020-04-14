@@ -25,14 +25,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     int correctDouble400;
     int incorrectDouble400;
 
+    int round;
+
+    int clueAmount;
 
 
+    //constant for the passed int, best practice is to use package name so interacting with other apps doesn't lead to issues
+    public static final String EXTRA_NUMBER = "com.chromsicle.application,jscore.EXTRA_NUMBER";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //set the starting round
+        round = 1;
 
         Button clue1 = findViewById(R.id.clue1);
         Button clue2 = findViewById(R.id.clue2);
@@ -208,22 +216,45 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()) {
             case R.id.clue1:
                 //what I want to happen (send the $ to the next activity and open it so that the amount will be added or subtracted form the total)
+                if(round == 1) {
+                    clueAmount = 200;
+                } else if (round == 2) {
+                    clueAmount = 400;
+                }
+                //convert the amount to a string
+                //String clueAmountString = String.valueOf(clueAmount);
                 openAnswerActivity();
                 break;
             case R.id.clue2:
-                //what I want to happen (send the $ to the next activity and open it so that the amount will be added or subtracted form the total)
+                if(round == 1) {
+                    clueAmount = 400;
+                } else if (round == 2) {
+                    clueAmount = 800;
+                }
                 openAnswerActivity();
                 break;
             case R.id.clue3:
-                //what I want to happen (send the $ to the next activity and open it so that the amount will be added or subtracted form the total)
+                if(round == 1) {
+                    clueAmount = 600;
+                } else if (round == 2) {
+                    clueAmount = 1200;
+                }
                 openAnswerActivity();
                 break;
             case R.id.clue4:
-                //what I want to happen (send the $ to the next activity and open it so that the amount will be added or subtracted form the total)
+                if(round == 1) {
+                    clueAmount = 800;
+                } else if (round == 2) {
+                    clueAmount = 1600;
+                }
                 openAnswerActivity();
                 break;
             case R.id.clue5:
-                //what I want to happen (send the $ to the next activity and open it so that the amount will be added or subtracted form the total)
+                if(round == 1) {
+                    clueAmount = 1000;
+                } else if (round == 2) {
+                    clueAmount = 2000;
+                }
                 openAnswerActivity();
                 break;
         }
@@ -232,6 +263,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void openAnswerActivity() {
         Intent intent = new Intent(this, Answer.class);
+        intent.putExtra(EXTRA_NUMBER, clueAmount);
         startActivity(intent);
     }
 }
