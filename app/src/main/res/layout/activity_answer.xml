@@ -52,6 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:background="#050cc7 "
+                android:onClick="correctButtonClicked"
                 android:paddingLeft="16dp"
                 android:paddingTop="16dp"
                 android:paddingRight="16dp"
@@ -62,7 +63,7 @@
                 android:shadowRadius="100"
                 android:soundEffectsEnabled="true"
                 android:text="correct"
-                android:textColor="#FFCC00"
+                android:textColor="#FFFFFF"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
@@ -72,6 +73,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:background="#050cc7 "
+                android:onClick="incorrectButtonClicked"
                 android:paddingLeft="16dp"
                 android:paddingTop="16dp"
                 android:paddingRight="16dp"
@@ -82,7 +84,7 @@
                 android:shadowRadius="100"
                 android:soundEffectsEnabled="true"
                 android:text="incorrect"
-                android:textColor="#FFCC00"
+                android:textColor="#FFFFFF"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
@@ -92,6 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:background="#050cc7 "
+                android:onClick="passButtonClicked"
                 android:paddingLeft="16dp"
                 android:paddingTop="16dp"
                 android:paddingRight="16dp"
@@ -102,7 +105,7 @@
                 android:shadowRadius="100"
                 android:soundEffectsEnabled="true"
                 android:text="pass"
-                android:textColor="#FFCC00"
+                android:textColor="#FFFFFF"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
