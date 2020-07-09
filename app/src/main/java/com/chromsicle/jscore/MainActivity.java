@@ -15,6 +15,7 @@ import android.widget.TextView;
 //is this something that needs to be done with shared preferences instead?
 //why can't I send data back and forth the way I send it to Answers in the first place?
 
+//todo(me!): make the text localized but without the decimal part. See video 56
 
 /**
  * right now the program uses the onclick in the xml but this should be changed to use setOnClickListener
@@ -54,6 +55,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         clue3 = findViewById(R.id.clue3);
         clue4 = findViewById(R.id.clue4);
         clue5 = findViewById(R.id.clue5);
+
+        //when a button is pressed, start the answer activity with the correct amount
+        clue1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent clue1Intent = new Intent(MainActivity.this, Answer.class);
+                startActivity(clue1Intent);
+            }
+        });
+
 
         //clicks sent to the onClick method
         clue1.setOnClickListener(this);

@@ -3,4 +3,11 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="clueText">#FFCC00</color>
+    <color name="clueBackground">#050cc7</color>
+    <color name="backgroundBlue">#060CE9</color>
+    <color name="moneyAnswerText">#FFF</color>
+    <color name="border">#000</color>
+
 </resources>

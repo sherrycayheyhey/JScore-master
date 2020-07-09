@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#060CE9">
+    android:background="@color/backgroundBlue">
 
     <Button
         android:id="@+id/backToAnswersButton"
@@ -12,10 +12,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:background="#050cc7 "
+        android:background="@color/clueBackground"
         android:onClick="doubleRound"
         android:text="back"
-        android:textColor="#FFCC00"
+        android:textColor="@color/clueText"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="112dp"
         android:text="$2400"
-        android:textColor="@android:color/white"
+        android:textColor="@color/moneyAnswerText"
         android:textSize="56sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="WAGER: $ "
-            android:textColor="@android:color/white"
+            android:textColor="@color/moneyAnswerText"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -64,7 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:background="@android:color/black"
+        android:background="@color/border"
         android:orientation="vertical"
         android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -77,7 +77,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
-            android:background="#050cc7 "
+            android:background="@color/clueBackground"
             android:onClick="addPoints"
             android:paddingLeft="16dp"
             android:paddingTop="16dp"
@@ -89,7 +89,7 @@
             android:shadowRadius="100"
             android:soundEffectsEnabled="true"
             android:text="correct"
-            android:textColor="#FFCC00"
+            android:textColor="@color/clueText"
             android:textSize="36sp"
             android:textStyle="bold" />
 
@@ -98,7 +98,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:background="#050cc7 "
+            android:background="@color/clueBackground"
             android:onClick="addPoints"
             android:paddingLeft="16dp"
             android:paddingTop="16dp"
@@ -110,7 +110,7 @@
             android:shadowRadius="100"
             android:soundEffectsEnabled="true"
             android:text="incorrect"
-            android:textColor="#FFCC00"
+            android:textColor="@color/clueText"
             android:textSize="36sp"
             android:textStyle="bold" />
 
@@ -122,12 +122,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="218dp"
         android:layout_marginEnd="26dp"
-        android:background="#050cc7 "
+        android:background="@color/clueBackground"
         android:onClick="doubleRound"
         android:paddingLeft="8dp"
         android:paddingRight="8dp"
         android:text="true daily double"
-        android:textColor="#FFCC00"
+        android:textColor="@color/clueText"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
